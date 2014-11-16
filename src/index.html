@@ -10,24 +10,26 @@
         <h1>Interval Training</h1>
     </header>
     <section id="mainContent">
-        <textarea>10:00</textarea>
+        <div id="phase" class="phase-view"></div>
+        <div id="countdownTime" class="time-view">00:00</div>
+        <div id="sessionTime" class="time-view">00:00</div>
         <!--Warmup container-->
         <div class="param-box">
             <h2>Warm Up</h2>
             <div class="ui-grid-c">
                 <div class="ui-block-a">
-                    <input type="text" name="warmup-min" value="01"/>
+                    <input type="text" id="warmup-min" value="00"/>
                 </div>
                 <div class="ui-block-b">
-                    <input type="text" name="warmup-sec" value="20"/>
+                    <input type="text" id="warmup-sec" value="00"/>
                 </div>
                 <div class="ui-block-c">
-                    <button>
+                    <button id="warm-plus" class="plusbutton">
                         <span class="ui-btn-icon-notext ui-icon-plus"></span>
                     </button>
                 </div>
                 <div class="ui-block-d">
-                    <button>
+                    <button id="warm-minus" class="minusbutton">
                         <span class="ui-btn-icon-notext ui-icon-minus"></span>
                     </button>
                 </div>
@@ -39,18 +41,18 @@
             <h2>Workout</h2>
             <div class="ui-grid-c">
                 <div class="ui-block-a">
-                    <input type="text" name="workout-min" value="0"/>
+                    <input type="text" id="workout-min" value="00"/>
                 </div>
                 <div class="ui-block-b">
-                    <input type="text" name="workout-sec" value="30"/>
+                    <input type="text" id="workout-sec" value="00"/>
                 </div>
                 <div class="ui-block-c">
-                    <button>
+                    <button id="workout-plus" class="plusbutton">
                         <span class="ui-btn-icon-notext ui-icon-plus"></span>
                     </button>
                 </div>
                 <div class="ui-block-d">
-                    <button>
+                    <button id="workout-minus" class="minusbutton">
                         <span class="ui-btn-icon-notext ui-icon-minus"></span>
                     </button>
                 </div>
@@ -62,18 +64,18 @@
             <h2>Rest</h2>
             <div class="ui-grid-c">
                 <div class="ui-block-a">
-                    <input type="text" name="rest-min" value="01"/>
+                    <input type="text" id="rest-min" value="00"/>
                 </div>
                 <div class="ui-block-b">
-                    <input type="text" name="rest-sec" value="00"/>
+                    <input type="text" id="rest-sec" value="00"/>
                 </div>
                 <div class="ui-block-c">
-                    <button>
+                    <button id="rest-plus" class="plusbutton">
                         <span class="ui-btn-icon-notext ui-icon-plus"></span>
                     </button>
                 </div>
                 <div class="ui-block-d">
-                    <button>
+                    <button id="rest-minus" class="minusbutton">
                         <span class="ui-btn-icon-notext ui-icon-minus"></span>
                     </button>
                 </div>
@@ -85,16 +87,16 @@
             <h2>Rounds</h2>
             <div class="ui-grid-c">
                 <div class="ui-block-a">
-                    <input type="text" name="rounds" value="01"/>
+                    <input type="text" id="rounds" value="00"/>
                 </div>
                 <div class="ui-block-b"></div>
                 <div class="ui-block-c">
-                    <button>
+                    <button id="rounds-plus" class="plusbutton">
                         <span class="ui-btn-icon-notext ui-icon-plus"></span>
                     </button>
                 </div>
                 <div class="ui-block-d">
-                    <button>
+                    <button id="rounds-minus" class="minusbutton">
                         <span class="ui-btn-icon-notext ui-icon-minus"></span>
                     </button>
                 </div>
@@ -106,24 +108,24 @@
             <h2>Cool Down</h2>
             <div class="ui-grid-c">
                 <div class="ui-block-a">
-                    <input type="text" name="cooldown-min" value="01"/>
+                    <input type="text" id="cooldown-min" value="00"/>
                 </div>
                 <div class="ui-block-b">
-                    <input type="text" name="cooldown-sec" value="20"/>
+                    <input type="text" id="cooldown-sec" value="00"/>
                 </div>
                 <div class="ui-block-c">
-                    <button>
+                    <button id="cooldown-plus" class="plusbutton">
                         <span class="ui-btn-icon-notext ui-icon-plus"></span>
                     </button>
                 </div>
                 <div class="ui-block-d">
-                    <button>
+                    <button id="cooldown-minus" class="minusbutton">
                         <span class="ui-btn-icon-notext ui-icon-minus"></span>
                     </button>
                 </div>
             </div>
         </div>
-        <button>Start Workout</button>
+        <button id="startWorkout">Start Workout</button>
     </section>
     <footer id="mainFooter"></footer>
     <script src="vendor/jquery-1.11.1.min.js"></script>

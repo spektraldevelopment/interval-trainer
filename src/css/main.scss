@@ -69,19 +69,18 @@ body {
   width: 90%;
   margin: 0 auto;
 
-  textarea {
-    resize: none;
-    font-size: 40px;
-    margin: 10px auto;
-    padding: 0;
+  .phase-view {
+    font-size: 20px;
     text-align: center;
-    width: 115px;
-    padding-top: 8px;
+  }
+
+  .time-view {
+    font-size: 40px;
+    text-align: center;
   }
 
   .param-box {
     padding: 10px;
-    background-color: $light-blue;
 
     h2 {
       margin: 5px;
@@ -92,7 +91,7 @@ body {
         div {
           position: relative;
           margin: 0 auto;
-          width: 70px;
+          width: 90%;//70px
           height: 48px;
 
           input[type="text"]
@@ -109,8 +108,10 @@ body {
       button {
         position: relative;
         margin: 0 auto;
+//        height: 50px;
+//        width: 50px;
+        width: 90%;
         height: 50px;
-        width: 50px;
       }
     }
   }
