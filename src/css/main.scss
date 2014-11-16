@@ -54,16 +54,66 @@ $orange: #eb7f00;
 //ELEMENTS
 body {
   margin: 0;
-  padding: 20px;
+  padding: 0px;
 }
 
 //IDS
 #mainHeader {
-
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
 }
 
 #mainContent {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
 
+  textarea {
+    resize: none;
+    font-size: 40px;
+    margin: 10px auto;
+    padding: 0;
+    text-align: center;
+    width: 115px;
+    padding-top: 8px;
+  }
+
+  .param-box {
+    padding: 10px;
+    background-color: $light-blue;
+
+    h2 {
+      margin: 5px;
+    }
+
+    div {
+      div {
+        div {
+          position: relative;
+          margin: 0 auto;
+          width: 70px;
+          height: 48px;
+
+          input[type="text"]
+          {
+            font-size: 28px;
+            text-align: center;
+            padding-top: 0px;
+          }
+        }
+      }
+    }
+
+    div {
+      button {
+        position: relative;
+        margin: 0 auto;
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
 }
 
 #mainFooter {

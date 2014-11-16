@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     // configure the tasks
     grunt.initConfig({
         //Change path based on your requirements
-        buildPath: '/boylerplate/build/',
+        buildPath: '/interval-trainer/build/',
         pkg: grunt.file.readJSON("package.json"),
         dot: true,
         copy: {
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                 src: ["build"]
             },
             scripts: {
-                src: ["build/js/*.js", "!build/js/main.min.js"]
+                src: ["build/js/*.js", "!build/js/main.min.js", "!build/js/spektraltools.min.js"]
                 //You can add multiple ignore files
                 //"build/*.js", "!build/NodeMaker-min.js", "!build/Files.js"
             },

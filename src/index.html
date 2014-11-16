@@ -2,14 +2,133 @@
 <html>
 <head>
     <title></title>
+    <link href='vendor/jquery.mobile-1.4.5.min.css' rel='stylesheet' type='text/css'>
     <link href='css/main.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <header id="mainHeader">
-        <h1>Boylerplate!</h1>
+        <h1>Interval Training</h1>
     </header>
-    <content id="mainContent"></content>
+    <section id="mainContent">
+        <textarea>10:00</textarea>
+        <!--Warmup container-->
+        <div class="param-box">
+            <h2>Warm Up</h2>
+            <div class="ui-grid-c">
+                <div class="ui-block-a">
+                    <input type="text" name="warmup-min" value="01"/>
+                </div>
+                <div class="ui-block-b">
+                    <input type="text" name="warmup-sec" value="20"/>
+                </div>
+                <div class="ui-block-c">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-plus"></span>
+                    </button>
+                </div>
+                <div class="ui-block-d">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-minus"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Workout container-->
+        <div class="param-box">
+            <h2>Workout</h2>
+            <div class="ui-grid-c">
+                <div class="ui-block-a">
+                    <input type="text" name="workout-min" value="0"/>
+                </div>
+                <div class="ui-block-b">
+                    <input type="text" name="workout-sec" value="30"/>
+                </div>
+                <div class="ui-block-c">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-plus"></span>
+                    </button>
+                </div>
+                <div class="ui-block-d">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-minus"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Rest container-->
+        <div class="param-box">
+            <h2>Rest</h2>
+            <div class="ui-grid-c">
+                <div class="ui-block-a">
+                    <input type="text" name="rest-min" value="01"/>
+                </div>
+                <div class="ui-block-b">
+                    <input type="text" name="rest-sec" value="00"/>
+                </div>
+                <div class="ui-block-c">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-plus"></span>
+                    </button>
+                </div>
+                <div class="ui-block-d">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-minus"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Rounds container-->
+        <div class="param-box">
+            <h2>Rounds</h2>
+            <div class="ui-grid-c">
+                <div class="ui-block-a">
+                    <input type="text" name="rounds" value="01"/>
+                </div>
+                <div class="ui-block-b"></div>
+                <div class="ui-block-c">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-plus"></span>
+                    </button>
+                </div>
+                <div class="ui-block-d">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-minus"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Cooldown container-->
+        <div class="param-box">
+            <h2>Cool Down</h2>
+            <div class="ui-grid-c">
+                <div class="ui-block-a">
+                    <input type="text" name="cooldown-min" value="01"/>
+                </div>
+                <div class="ui-block-b">
+                    <input type="text" name="cooldown-sec" value="20"/>
+                </div>
+                <div class="ui-block-c">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-plus"></span>
+                    </button>
+                </div>
+                <div class="ui-block-d">
+                    <button>
+                        <span class="ui-btn-icon-notext ui-icon-minus"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button>Start Workout</button>
+    </section>
     <footer id="mainFooter"></footer>
+    <script src="vendor/jquery-1.11.1.min.js"></script>
+    <script src="vendor/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/spektraltools.min.js"></script>
     <script src="js/main.min.js"></script>
     <script>
         window.addEventListener('load', function(evt){

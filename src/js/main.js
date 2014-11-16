@@ -7,5 +7,5 @@ var data = {
 }
 
 function init() {
-    console.log('main init');
+
 }

@@ -1,4 +1,49 @@
 body {
   margin: 0;
-  padding: 20px;
+  padding: 0px;
+}
+
+#mainHeader {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+}
+
+#mainContent {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+#mainContent textarea {
+  resize: none;
+  font-size: 40px;
+  margin: 10px auto;
+  padding: 0;
+  text-align: center;
+  width: 115px;
+  padding-top: 8px;
+}
+#mainContent .param-box {
+  padding: 10px;
+  background-color: #acf0f2;
+}
+#mainContent .param-box h2 {
+  margin: 5px;
+}
+#mainContent .param-box div div div {
+  position: relative;
+  margin: 0 auto;
+  width: 70px;
+  height: 48px;
+}
+#mainContent .param-box div div div input[type="text"] {
+  font-size: 28px;
+  text-align: center;
+  padding-top: 0px;
+}
+#mainContent .param-box div button {
+  position: relative;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
 }
