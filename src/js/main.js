@@ -184,13 +184,24 @@ function onStartWorkout() {
             if (workoutTime <= 0) {
                 Spektral.stopTimer(phaseTimer);
                 phaseTimer = false;
-                if (currentRound > 0) {
-                    currentRound --;
-                    beginWorkout();
-                } else {
-                    console.log('End of rounds, starting cooldown.');
-                    beginCooldown();
-                }
+                beginRest();
+            }
+        });
+    }
+
+    function beginRest() {
+        var restTime = data.rest;
+        currentPhase = 'rest';
+        setWorkoutPhase('Rest');
+        phaseTimer = Spektral.createTimer(1, function(){
+           restTime --;
+           if(restTime <= 0)
+            if (currentRound > 0) {
+                currentRound --;
+                beginRest();
+            } else {
+                console.log('End of rounds, starting cooldown.');
+                beginCooldown();
             }
         });
     }
@@ -218,7 +229,7 @@ function setWorkoutPhase(phase, message) {
 function getTotalTime() {
     var totalTime = data.warmup + ((data.work + data.rest) * data.rounds) + data.cooldown;
     ///console.log("Session time: " + formatTime(totalTime).minutes + ":" + formatTime(totalTime).seconds);
-    sessionTime.innerHTML = "Session time: " + formatTime(totalTime).minutes + ":" + formatTime(totalTime).seconds;
+    //sessionTime.innerHTML = "Session time: " + formatTime(totalTime).minutes + ":" + formatTime(totalTime).seconds;
 }
 
 //UTILS
