@@ -45,3 +45,6 @@ body {
   width: 90%;
   height: 50px;
 }
+#mainContent .param-box div button span {
+  pointer-events: none;
+}

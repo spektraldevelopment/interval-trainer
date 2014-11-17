@@ -112,6 +112,10 @@ body {
 //        width: 50px;
         width: 90%;
         height: 50px;
+
+        span {
+          pointer-events: none;
+        }
       }
     }
   }
