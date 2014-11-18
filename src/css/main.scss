@@ -116,8 +116,6 @@ body {
       button {
         position: relative;
         margin: 0 auto;
-//        height: 50px;
-//        width: 50px;
         width: 90%;
         height: 50px;
 
@@ -125,6 +123,31 @@ body {
           pointer-events: none;
         }
       }
+    }
+  }
+
+  #workoutScreenContainer {
+    background-color: #cecece;
+    padding: 10px;
+
+    #phaseIndicator {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    #phaseCountdown {
+      font-size: 60px;
+      text-align: center;
+    }
+
+    #roundIndicator {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    #totalCountdown {
+      font-size: 30px;
+      text-align: center;
     }
   }
 }

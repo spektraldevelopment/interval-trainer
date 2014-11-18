@@ -56,6 +56,26 @@ body {
 #mainContent .param-box div button span {
   pointer-events: none;
 }
+#mainContent #workoutScreenContainer {
+  background-color: #cecece;
+  padding: 10px;
+}
+#mainContent #workoutScreenContainer #phaseIndicator {
+  font-size: 30px;
+  text-align: center;
+}
+#mainContent #workoutScreenContainer #phaseCountdown {
+  font-size: 60px;
+  text-align: center;
+}
+#mainContent #workoutScreenContainer #roundIndicator {
+  font-size: 30px;
+  text-align: center;
+}
+#mainContent #workoutScreenContainer #totalCountdown {
+  font-size: 30px;
+  text-align: center;
+}
 
 #mainFooter {
   padding: 0;
