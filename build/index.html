@@ -10,17 +10,19 @@
         <h1>Interval Training</h1>
     </header>
     <section id="mainContent">
-        <div id="sessionTime" class="time-view">00:00</div>
+
+        <!--START SCREEN-->
         <div id="startScreenContainer">
+            <div id="sessionTime" class="time-view"></div>
             <!--Warmup container-->
             <div class="param-box">
                 <h2>Warm Up</h2>
                 <div class="ui-grid-c">
                     <div class="ui-block-a">
-                        <input type="text" id="warmup-min" value="00"/>
+                        <input type="text" id="warmup-min" value=""/>
                     </div>
                     <div class="ui-block-b">
-                        <input type="text" id="warmup-sec" value="00"/>
+                        <input type="text" id="warmup-sec" value=""/>
                     </div>
                     <div class="ui-block-c">
                         <button id="warm-plus" class="plusbutton">
@@ -40,10 +42,10 @@
                 <h2>Workout</h2>
                 <div class="ui-grid-c">
                     <div class="ui-block-a">
-                        <input type="text" id="workout-min" value="00"/>
+                        <input type="text" id="workout-min" value=""/>
                     </div>
                     <div class="ui-block-b">
-                        <input type="text" id="workout-sec" value="00"/>
+                        <input type="text" id="workout-sec" value=""/>
                     </div>
                     <div class="ui-block-c">
                         <button id="workout-plus" class="plusbutton">
@@ -63,10 +65,10 @@
                 <h2>Rest</h2>
                 <div class="ui-grid-c">
                     <div class="ui-block-a">
-                        <input type="text" id="rest-min" value="00"/>
+                        <input type="text" id="rest-min" value=""/>
                     </div>
                     <div class="ui-block-b">
-                        <input type="text" id="rest-sec" value="00"/>
+                        <input type="text" id="rest-sec" value=""/>
                     </div>
                     <div class="ui-block-c">
                         <button id="rest-plus" class="plusbutton">
@@ -86,7 +88,7 @@
                 <h2>Rounds</h2>
                 <div class="ui-grid-c">
                     <div class="ui-block-a">
-                        <input type="text" id="rounds" value="00"/>
+                        <input type="text" id="rounds" value=""/>
                     </div>
                     <div class="ui-block-b"></div>
                     <div class="ui-block-c">
@@ -107,10 +109,10 @@
                 <h2>Cool Down</h2>
                 <div class="ui-grid-c">
                     <div class="ui-block-a">
-                        <input type="text" id="cooldown-min" value="00"/>
+                        <input type="text" id="cooldown-min" value=""/>
                     </div>
                     <div class="ui-block-b">
-                        <input type="text" id="cooldown-sec" value="00"/>
+                        <input type="text" id="cooldown-sec" value=""/>
                     </div>
                     <div class="ui-block-c">
                         <button id="cooldown-plus" class="plusbutton">
@@ -126,9 +128,14 @@
             </div>
         </div>
 
-        <button id="startWorkout">Start Workout</button>
+        <!--WORKOUT SCREEN-->
+        <div id="workoutScreenContainer">
+
+        </div>
     </section>
-    <footer id="mainFooter"></footer>
+    <footer id="mainFooter" data-role="footer" class="ui-bar ui-footer ui-bar-a" data-position="fixed">
+        <button id="startStopWorkout">Start Workout</button>
+    </footer>
     <script src="vendor/jquery-1.11.1.min.js"></script>
     <script src="vendor/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/spektraltools.min.js"></script>

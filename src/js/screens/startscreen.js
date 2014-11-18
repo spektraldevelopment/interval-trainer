@@ -1,30 +1,29 @@
 (function(window){
     "use strict";
-    var StartScreen = {}, startScreenContainer;
+    var
+        StartScreen = {}, startScreenContainer,
+        warmMin, warmSec, workMin, workSec, restMin, restSec, rounds, coolMin, coolSec,
+        incrementTimer = false;
 
     StartScreen.init = function() {
         startScreenContainer = document.querySelector('#startScreenContainer');
 
-        //TODO: switch document to startScreenContainer
+        phase = startScreenContainer.querySelector('#phase');
+        sessionTime = startScreenContainer.querySelector('#sessionTime');
 
-        phase = document.querySelector('#phase');
-        sessionTime = document.querySelector('#sessionTime');
+        warmMin = startScreenContainer.querySelector('#warmup-min');
+        warmSec = startScreenContainer.querySelector('#warmup-sec');
 
-        warmMin = document.querySelector('#warmup-min');
-        warmSec = document.querySelector('#warmup-sec');
+        workMin = startScreenContainer.querySelector('#workout-min');
+        workSec = startScreenContainer.querySelector('#workout-sec');
 
-        workMin = document.querySelector('#workout-min');
-        workSec = document.querySelector('#workout-sec');
+        restMin = startScreenContainer.querySelector('#rest-min');
+        restSec = startScreenContainer.querySelector('#rest-sec');
 
-        restMin = document.querySelector('#rest-min');
-        restSec = document.querySelector('#rest-sec');
+        rounds = startScreenContainer.querySelector('#rounds');
 
-        rounds = document.querySelector('#rounds');
-
-        coolMin = document.querySelector('#cooldown-min');
-        coolSec = document.querySelector('#cooldown-sec');
-
-        startWK = document.querySelector('#startWorkout');
+        coolMin = startScreenContainer.querySelector('#cooldown-min');
+        coolSec = startScreenContainer.querySelector('#cooldown-sec');
 
         initValues();
         initEvents();
@@ -33,11 +32,11 @@
     }
 
     StartScreen.show = function() {
-        //show start screen container
+        startScreenContainer.setAttribute('class', 'show');
     }
 
     StartScreen.hide = function() {
-        //hide  start screen container
+        startScreenContainer.setAttribute('class', 'hide');
     }
 
     function initValues() {
@@ -55,13 +54,13 @@
         coolMin.value = formatTime(data.cooldown).minutes;
         coolSec.value = formatTime(data.cooldown).seconds;
 
-        //getTotalTime();
+        updateSessionTime();
     }
 
     function initEvents() {
         var
-            plusButtons = document.querySelectorAll('.plusbutton'),
-            minusButtons = document.querySelectorAll('.minusbutton'),
+            plusButtons = startScreenContainer.querySelectorAll('.plusbutton'),
+            minusButtons = startScreenContainer.querySelectorAll('.minusbutton'),
             i, j;
 
         for (i = 0; i < plusButtons.length; i += 1) {
@@ -156,7 +155,12 @@
         coolMin.value = formatTime(data.cooldown).minutes;
         coolSec.value = formatTime(data.cooldown).seconds;
 
-        //getTotalTime();
+        updateSessionTime();
+    }
+
+    function updateSessionTime() {
+        var totalTime = data.warmup + ((data.work + data.rest) * data.rounds) + data.cooldown;
+        sessionTime.innerHTML = "Session time: " + formatTime(totalTime).minutes + ":" + formatTime(totalTime).seconds;
     }
 
     //UTILS

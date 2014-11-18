@@ -1,7 +1,5 @@
 var
-    data, sessionTime, phase,
-    warmMin, warmSec, workMin, workSec, restMin, restSec, rounds, coolMin, coolSec,
-    incrementTimer = false, startWK,
+    data, sessionTime, phase, startStopWK,
     currentPhase = 'stopped', currentRound,
     phaseTimer = false;
 
@@ -14,13 +12,21 @@ data = {
 }
 
 function init() {
+
+    startStopWK = document.querySelector('#startStopWorkout');
+
     StartScreen.init();
+
+    Spektral.attachEventListener(startStopWK, 'click', onStartStopWK);
 }
 
-function getTotalTime() {
-    var totalTime = data.warmup + ((data.work + data.rest) * data.rounds) + data.cooldown;
-    ///console.log("Session time: " + formatTime(totalTime).minutes + ":" + formatTime(totalTime).seconds);
-    //sessionTime.innerHTML = "Session time: " + formatTime(totalTime).minutes + ":" + formatTime(totalTime).seconds;
+function onStartStopWK() {
+    if(currentPhase === 'stopped') {
+        //Start workout
+        StartScreen.hide();
+    } else {
+        //Stop workout
+    }
 }
 
 //UTILS

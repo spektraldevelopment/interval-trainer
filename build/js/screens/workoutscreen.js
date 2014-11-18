@@ -1,6 +1,28 @@
 (function(window){
     "use strict";
-    var WorkoutScreen = {};
+    var WorkoutScreen = {}, workoutScreenContainer;
+
+    WorkoutScreen.init = function() {
+
+        workoutScreenContainer = document.querySelector('#workoutScreenContainer');
+        WorkoutScreen.hide();
+    }
+
+    WorkoutScreen.show = function() {
+        workoutScreenContainer.setAttribute('class', 'show');
+    }
+
+    WorkoutScreen.hide = function(){
+        workoutScreenContainer.setAttribute('class', 'hide');
+    }
+
+    WorkoutScreen.startWorkout = function() {
+
+    }
+
+    WorkoutScreen.stopWorkout = function() {
+
+    }
 
     function onStartWorkout() {
         var warmupTime = data.warmup;
