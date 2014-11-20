@@ -1,7 +1,6 @@
 var
     data, sessionTime, phase, startStopWK,
-    currentPhase = 'stopped', currentRound,
-    phaseTimer = false;
+    currentPhase = 'stopped';
 
 data = {
     "warmup": 8,
@@ -16,6 +15,7 @@ function init() {
     startStopWK = document.querySelector('#startStopWorkout');
 
     StartScreen.init();
+    WorkoutScreen.init();
 
     Spektral.attachEventListener(startStopWK, 'click', onStartStopWK);
 }
@@ -24,12 +24,39 @@ function onStartStopWK() {
     if(currentPhase === 'stopped') {
         //Start workout
         StartScreen.hide();
+        WorkoutScreen.show();
+        WorkoutScreen.startWorkout();
     } else {
         //Stop workout
     }
 }
 
 //UTILS
+//UTILS
+function formatTime (time) {
+    var
+        formattedTime = {},
+        hours = Math.floor(time / (60 * 60)),
+        minDivisor = time % (60 * 60),
+        minutes = Math.floor(minDivisor / 60),
+        seconds = Math.floor(minDivisor % 60),
+        secondsString = seconds.toString();
+
+    if (seconds < 10) {
+        secondsString = "0" + secondsString;
+    }
+
+    formattedTime["hours"] = hours.toString();
+    formattedTime["minutes"] = minutes.toString();
+    formattedTime["seconds"] = secondsString;
+
+    formattedTime["hoursNum"] = hours;
+    formattedTime["minutesNum"] = minutes;
+    formattedTime["secondsNum"] = seconds;
+
+    return formattedTime;
+}
+
 function convertToSeconds (formattedTime) {
     var
         fTimeType = getType(formattedTime),

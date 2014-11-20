@@ -163,30 +163,30 @@
         sessionTime.innerHTML = "Session time: " + formatTime(totalTime).minutes + ":" + formatTime(totalTime).seconds;
     }
 
-    //UTILS
-    function formatTime (time) {
-        var
-            formattedTime = {},
-            hours = Math.floor(time / (60 * 60)),
-            minDivisor = time % (60 * 60),
-            minutes = Math.floor(minDivisor / 60),
-            seconds = Math.floor(minDivisor % 60),
-            secondsString = seconds.toString();
-
-        if (seconds < 10) {
-            secondsString = "0" + secondsString;
-        }
-
-        formattedTime["hours"] = hours.toString();
-        formattedTime["minutes"] = minutes.toString();
-        formattedTime["seconds"] = secondsString;
-
-        formattedTime["hoursNum"] = hours;
-        formattedTime["minutesNum"] = minutes;
-        formattedTime["secondsNum"] = seconds;
-
-        return formattedTime;
-    }
+//    //UTILS
+//    function formatTime (time) {
+//        var
+//            formattedTime = {},
+//            hours = Math.floor(time / (60 * 60)),
+//            minDivisor = time % (60 * 60),
+//            minutes = Math.floor(minDivisor / 60),
+//            seconds = Math.floor(minDivisor % 60),
+//            secondsString = seconds.toString();
+//
+//        if (seconds < 10) {
+//            secondsString = "0" + secondsString;
+//        }
+//
+//        formattedTime["hours"] = hours.toString();
+//        formattedTime["minutes"] = minutes.toString();
+//        formattedTime["seconds"] = secondsString;
+//
+//        formattedTime["hoursNum"] = hours;
+//        formattedTime["minutesNum"] = minutes;
+//        formattedTime["secondsNum"] = seconds;
+//
+//        return formattedTime;
+//    }
 
     window.StartScreen = StartScreen;
 }(window));

@@ -56,7 +56,7 @@ $orange: #eb7f00;
 }
 
 .show {
-  display: inline-block;
+  display: block;
 }
 
 //ELEMENTS
@@ -77,56 +77,62 @@ body {
   width: 90%;
   margin: 0 auto;
 
-  .phase-view {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .time-view {
-    font-size: 40px;
-    text-align: center;
-  }
-
-  .param-box {
-    padding: 10px;
-
-    h2 {
-      margin: 5px;
+  //Start screen
+  #startScreenContainer {
+    .phase-view {
+      font-size: 20px;
+      text-align: center;
     }
 
-    div {
+    .time-view {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .param-box {
+      padding: 10px;
+
+      h2 {
+        margin: 5px;
+      }
+
       div {
         div {
+          div {
+            position: relative;
+            margin: 0 auto;
+            width: 90%;//70px
+            height: 48px;
+
+            input[type="text"]
+            {
+              font-size: 28px;
+              text-align: center;
+              padding-top: 0px;
+            }
+          }
+        }
+      }
+
+      div {
+        button {
           position: relative;
           margin: 0 auto;
-          width: 90%;//70px
-          height: 48px;
+          width: 90%;
+          height: 50px;
 
-          input[type="text"]
-          {
-            font-size: 28px;
-            text-align: center;
-            padding-top: 0px;
+          span {
+            pointer-events: none;
           }
         }
       }
     }
-
-    div {
-      button {
-        position: relative;
-        margin: 0 auto;
-        width: 90%;
-        height: 50px;
-
-        span {
-          pointer-events: none;
-        }
-      }
-    }
   }
 
+  //Workout screen
   #workoutScreenContainer {
+    position: relative;
+    margin: 0 auto;
     background-color: #cecece;
     padding: 10px;
 

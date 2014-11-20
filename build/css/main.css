@@ -3,7 +3,7 @@
 }
 
 .show {
-  display: inline-block;
+  display: block;
 }
 
 body {
@@ -22,41 +22,43 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-#mainContent .phase-view {
+#mainContent #startScreenContainer .phase-view {
   font-size: 20px;
   text-align: center;
 }
-#mainContent .time-view {
+#mainContent #startScreenContainer .time-view {
   font-size: 40px;
   text-align: center;
 }
-#mainContent .param-box {
+#mainContent #startScreenContainer .param-box {
   padding: 10px;
 }
-#mainContent .param-box h2 {
+#mainContent #startScreenContainer .param-box h2 {
   margin: 5px;
 }
-#mainContent .param-box div div div {
+#mainContent #startScreenContainer .param-box div div div {
   position: relative;
   margin: 0 auto;
   width: 90%;
   height: 48px;
 }
-#mainContent .param-box div div div input[type="text"] {
+#mainContent #startScreenContainer .param-box div div div input[type="text"] {
   font-size: 28px;
   text-align: center;
   padding-top: 0px;
 }
-#mainContent .param-box div button {
+#mainContent #startScreenContainer .param-box div button {
   position: relative;
   margin: 0 auto;
   width: 90%;
   height: 50px;
 }
-#mainContent .param-box div button span {
+#mainContent #startScreenContainer .param-box div button span {
   pointer-events: none;
 }
 #mainContent #workoutScreenContainer {
+  position: relative;
+  margin: 0 auto;
   background-color: #cecece;
   padding: 10px;
 }
